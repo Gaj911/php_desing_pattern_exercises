@@ -9,25 +9,18 @@ class BAndWFilter implements Filter
 {
 //  Your code here
 
-public function __construct(){}
-
-public function getFilter() 
+public function getFilter()
 {
-  return 'Black and White filter';
+  return get_class();
 }
-
 }
 
 class SepiaFilter implements Filter
 {
 //  Your code here
-
-
-public function __construct() {}
-
-public function getFilter() 
+public function getFilter()
 {
-  return 'Sepia filter';
+  return get_class();
 }
 
 
