@@ -11,17 +11,23 @@ class QueryBuilder
 
     public function select(...$args): QueryBuilder 
     {
-        $this->select[] = $args;
+        $this->select = $args;
         return $this;
-
     }
 
     public function from($table, $alias = false): QueryBuilder 
     {
-        $this->$from[] =  ; 
+        $this->from[] = "$table AS $alias";
+        return $this;
     }
 
-    public function where(...$args): QueryBuilder {}
+    public function where(...$args): QueryBuilder 
+    {
+        $this->where = $args;
+        return $this;
+    }
 
-    public function __toString(): QueryBuilder {}
-}
+    public function __toString()
+    {
+        return 'SELECT' . implode(", ", $this->select) . 'FROM' . implode(", ", $this->from) . 'WHERE' . implode(", ", $this->where);
+    }}
