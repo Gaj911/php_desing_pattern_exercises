@@ -8,4 +8,4 @@ $bitcoin = new Bitcoin(300);    // Bitcoin with balance 300
 $bank->setNext($paypal);
 $paypal->setNext($bitcoin);
 
-$bank->pay(259);
+$bank->pay(200);

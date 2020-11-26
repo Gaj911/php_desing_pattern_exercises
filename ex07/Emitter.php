@@ -16,12 +16,15 @@ class Emitter
 
   public function emit(string $event, ...$args) 
   {
-    
+    return call_user_func_array($this->listeners[$event], $args);
   }
 
 
 
-  public function on(string $event, callable $fct) {}
+  public function on(string $event, callable $fct)
+   {
+     
+   }
 
 
 }

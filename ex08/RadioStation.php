@@ -12,4 +12,10 @@ class RadioStation
     {
         return $this->frequency;
     }
+
+    public function isSame(RadioStation $stationComp)
+    {
+      return ($stationComp->frequency === $this->frequency);
+    }
+
 }
