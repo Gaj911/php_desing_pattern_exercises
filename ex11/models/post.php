@@ -7,7 +7,10 @@
 
     public function __construct($id, $author, $content)
     {
+<<<<<<< HEAD
       
+=======
+>>>>>>> 493ddbeab6bde0ac8813873b01e4f8b32f4f9672
       $this->id = $id;
       $this->author = $author;
       $this->content = $content;
@@ -27,6 +30,20 @@
     public function setAuthor()
     {
         return $this->author;
+<<<<<<< HEAD
+=======
+    }
+
+    public function getontent()
+    {
+        return $this->content;
+        ;
+    }
+
+    public function setContent()
+    {
+        return $this->content;
+>>>>>>> 493ddbeab6bde0ac8813873b01e4f8b32f4f9672
     }
 
     public function getontent()
