@@ -11,9 +11,34 @@ interface Picture
 class Portrait implements Picture
 {
 //  Your code here
+protected $filter;
+
+public function __construct(Filter $filter)
+{
+  $this->filter = $filter;
+}
+
+public function getPicture() {
+  return $this->filter;
+}
+
 }
 
 class Landscape implements Picture
 {
 // Your code here
+
+protected $filter;
+
+public function __construct(Filter $filter)
+{
+  $this->filter = $filter;
+}
+
+public function getPicture() {
+  return $this->filter;
+}
+
+
+
 }
